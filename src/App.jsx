@@ -1,6 +1,7 @@
 import '../src/assets/css/main.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Portfolio from './pages/portfolio/Portfolio';
+import { NotFound } from './pages/notfound/NotFound';
 function App() {
 
   return (
@@ -8,6 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element = {<Portfolio/>}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
     </>

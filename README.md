@@ -6,7 +6,7 @@ A sleek, interactive, and fully responsive portfolio website built with **React 
 
 ## 🌐 Live Demo
 
-🔗 [View Live Portfolio]()
+🔗 [View Live Portfolio](https://portfolio-lime-ten-23.vercel.app/)
 📂 [GitHub Repository](https://github.com/hemesh3/portfolio)
 
 ---
