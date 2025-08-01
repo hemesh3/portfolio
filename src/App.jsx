@@ -1,5 +1,6 @@
 import '../src/assets/css/main.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Portfolio from './pages/portfolio/Portfolio';
 import { NotFound } from './pages/notfound/NotFound';
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
+    <SpeedInsights/>
     </>
   )
 }
