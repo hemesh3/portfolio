@@ -1,12 +1,10 @@
-import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { TypeAnimation } from 'react-type-animation';
 import { aboutInfo } from '../../data';
 import { FaExternalLinkAlt, FaLinkedin, FaGithub, } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks, SiHackerrank } from "react-icons/si";
 
 const About = () => {
-  const { name, roles, aboutMe, resumeLink, profilePic, linkedinLink, githubLink, leetcodeLink, geeksforgeeksLink, hackerrankLink } = aboutInfo[0];
+  const { name, roles, aboutMe, resumeLink, profilePic, linkedinLink, githubLink } = aboutInfo[0];
   const typingSequence = roles.flatMap(role => [role, 2000]);
 
   return (
@@ -17,7 +15,7 @@ const About = () => {
       <div className='flex flex-col-reverse md:flex-row justify-between items-center'>
 
         {/* Left Side */}
-        <div className='md:w-3/5 text-center md:text-left mt-8 md:mt-0 pr-10'>
+        <div className='md:w-3/5 text-center md:text-left mt-28 md:mt-0 pr-10'>
 
           {/* Greeting */}
           <h1 className='text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white mb-2 leading-tight'>
@@ -37,7 +35,7 @@ const About = () => {
             <TypeAnimation
               sequence={typingSequence}
               wrapper="span"
-              speed={50}
+              speed={40}
               repeat={Infinity}
               cursor={true}
               className="text-[#8245ec]"
@@ -54,9 +52,6 @@ const About = () => {
             {[
               { icon: <FaLinkedin />, link: `${linkedinLink}` },
               { icon: <FaGithub />, link: `${githubLink}` },
-              // { icon: <SiGeeksforgeeks />, link: `${geeksforgeeksLink}` },
-              // { icon: <SiLeetcode />, link: `${leetcodeLink}` },
-              // { icon: <SiHackerrank />, link: `${hackerrankLink}` },
             ].map((item, index) => (
               <a
                 key={index}
